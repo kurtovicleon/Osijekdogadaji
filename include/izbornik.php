@@ -8,19 +8,16 @@
     <ul class="dropdown menu" data-dropdown-menu>
     	
       <?php 
-      //poziv funkcije koja je definirana u /Edunova05/funkcije.php:4
+    
       stavkaIzbornika($putanjaAPP."index.php", $naslovAPP); ?>
       
       <?php if(isset($_SESSION[$appID."autoriziran"])): ?>	
       	<?php stavkaIzbornika($putanjaAPP . "privatno/nadzornaPloca.php", "Nadzorna ploča"); ?>
 		<li>
-			<a href="#">Programi</a>
+			<a href="#">Događaji</a>
 			<ul class="menu vertical">
 				<?php 
-				stavkaIzbornika($putanjaAPP . "privatno/smjerovi/index.php", "Smjerovi"); 
-				stavkaIzbornika($putanjaAPP . "privatno/grupe/index.php", "Grupe"); 
-				stavkaIzbornika($putanjaAPP . "privatno/polaznici/index.php", "Polaznici"); 
-				stavkaIzbornika($putanjaAPP . "privatno/predavaci/index.php", "Predavači"); 
+				stavkaIzbornika($putanjaAPP . "privatno/događaji/index.php", "Pregled događaja");  
 				?>
 			</ul>
 		</li>

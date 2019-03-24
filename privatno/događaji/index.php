@@ -13,7 +13,7 @@ provjeraOvlasti();
       	
       	<div class="grid-x grid-padding-x">
 			<div class="large-12 cell">
-				smjerovi
+			Događaji
 			</div>
 		</div>
 		<?php include_once '../../include/podnozje.php'; ?>
