@@ -19,10 +19,10 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 				
 				<form method="get">
 					<input type="text" name="uvjet" 
-					placeholder="uvjet pretraživanja (broj ugovora, ime, prezime ili email)"
+					placeholder="uvjet pretraživanja (organizator,događaj,mjesto,datum)"
 					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
 				</form>
-				<a href="novi.php" class="button success expanded"><i class="fas fa-plus-circle fa-2x"></i></a>
+
 				
 				<?php
 					
@@ -30,10 +30,10 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 					
 					$izraz = $veza->prepare("
 					
-						select count(a.sifra)
-						from polaznik a inner join osoba b
-						on a.osoba=b.sifra
-						where concat(b.ime, b.prezime, a.brojugovora,b.email) 
+					select count(a.sifra)
+						from dogadaj a inner join korisnik b
+						on a.korisnik=b.sifra
+						where concat(a.datum,a.naziv,a.tekst,a.vrijeme,b.ime) 
 						like :uvjet
 					
 					");
@@ -53,15 +53,17 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 					
 						select 
 							a.sifra,
-							b.ime, 
-							b.prezime, 
-							a.brojugovora,
-							b.email
-						from polaznik a inner join osoba b
-						on a.osoba=b.sifra
-						where concat(b.ime, b.prezime, a.brojugovora,b.email) 
+							a.datum, 
+							a.naziv, 
+							a.tekst,
+							a.cijena,
+							a.vrijeme,
+							b.ime
+						from dogadaj a inner join korisnik b
+						on a.korisnik=b.sifra
+						where concat(a.datum,a.naziv,a.tekst,a.cijena,a.vrijeme,b.ime) 
 						like :uvjet
-						order by b.prezime, b.ime
+						order by a.datum
 					 	limit :stranica, :brojRezultataPoStranici");
 					$izraz->bindValue("stranica", $stranica* $brojRezultataPoStranici -  $brojRezultataPoStranici , PDO::PARAM_INT);
 					$izraz->bindValue("brojRezultataPoStranici", $brojRezultataPoStranici, PDO::PARAM_INT);
@@ -76,10 +78,12 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 				<table>
 					<thead>
 						<tr>
-							<th>Polaznik</th>
-							<th>Broj ugovora</th>
-							<th>Email</th>
-							<th>Akcija</th>
+							<th>Datum</th>
+							<th>Naziv događaja</th>
+							<th>Opis</th>
+							<th>Upad</th>
+							<th>Vrijeme</th>
+							<th>Organizator</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -89,14 +93,14 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 					?>
 						
 						<tr>
-							<td><?php echo $red->prezime . " " . $red->ime ?></td>
-							<td><?php echo $red->brojugovora; ?></td>
-							<td><?php echo $red->email; ?></td>
+							<td><?php echo $red->datum;?></td>
+							<td><?php echo $red->naziv; ?></td>
+							<td><?php echo $red->tekst; ?></td>
+							<td><?php echo $red->cijena; ?></td>
+							<td><?php echo $red->vrijeme; ?></td>
+							<td><?php echo $red->ime; ?></td>
 							
-							<td>
-								<a href="detalji.php?sifra=<?php echo $red->sifra ?>"><i class="far fa-edit fa-2x"></i></a>
-								<a href="brisanje.php?sifra=<?php echo $red->sifra ?>"><i class="far fa-trash-alt fa-2x"></i></a>  
-							</td>
+							
 						</tr>
 						
 					<?php endforeach; ?>

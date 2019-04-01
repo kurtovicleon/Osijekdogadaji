@@ -18,7 +18,7 @@ if($_SERVER["HTTP_HOST"]==="kurta24.byethost7.com"){
 	$dev=false;
 }else{
 	$host="localhost";
-	$dbname="edunovapp16";
+	$dbname="dogadajiosijek";
 	$dbuser="leon";
 	$dbpass="leon";
 	$dev=true;
