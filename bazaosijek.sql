@@ -1,7 +1,3 @@
-drop database if exists dogadajiosijek;
-create database dogadajiosijek character set utf8 collate utf8_croatian_ci;
-
-use dogadajiosijek;
 
 
 create table korisnik(

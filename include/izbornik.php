@@ -23,10 +23,10 @@
 		</li>
     <?php if($_SESSION[$appID."autoriziran"]->uloga==="oper"):?>
 		<li>
-			<a href="#">Primjeri</a>
+			<a href="#">Prijavi događaj</a>
 			<ul class="menu vertical">
 				<?php 
-				stavkaIzbornika($putanjaAPP . "privatno/primjeri/forma.php", "Forma"); 
+				stavkaIzbornika($putanjaAPP . "privatno/primjeri/index.php", "Prijavi"); 
 				?>
 			</ul>
 		</li>
