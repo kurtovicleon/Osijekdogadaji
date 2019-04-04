@@ -9,7 +9,7 @@ $veza->beginTransaction();
 	insert into korisnik (ime,	kontaktbroj,	email)
 			   values ('',		'',		'')");
 	$izraz->execute();
-	$zadnjaSifra = $veza->lastInsertId(); 
+	$zadnjaSifra = $veza->lastInsertId(); //ZADNJA ŠIFRA DODJELJENA OD STRANE BAZE
 	$izraz = $veza->prepare(
 	"insert into dogadaj (korisnik,				naziv,			mjesto,     vrijeme,     cijena,       tekst,        kategorija,        datum)
 	    			values (" . $zadnjaSifra . ",	'',		'',		'',			'',		'',       '',		'')");

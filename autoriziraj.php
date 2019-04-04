@@ -11,7 +11,7 @@ if($_POST["email"]==="leon@osijek.hr" && $_POST["lozinka"]==="leon"){
 	$o->prezime = "Urednik";
 	$o->uloga="oper";
 	$_SESSION[$appID."autoriziran"]=$o;
-	header("location: privatno/nadzornaPloca.php");
+	header("location: index.php");
 
 }else if ($_POST["email"]==="david@osijek.hr" && $_POST["lozinka"]==="david"){
 	include_once 'konfiguracija.php';
@@ -20,7 +20,7 @@ if($_POST["email"]==="leon@osijek.hr" && $_POST["lozinka"]==="leon"){
 	$o->prezime = "Direktor";
 	$o->uloga="admin";
 	$_SESSION[$appID."autoriziran"]=$o;
-	header("location: privatno/nadzornaPloca.php");
+	header("location: index.php");
 }else{
 	header("location: login.php?neuspjelo&email=" . $_POST["email"]);
 }

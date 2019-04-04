@@ -19,10 +19,10 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 				
 				<form method="get">
 					<input type="text" name="uvjet" 
-					placeholder="Unesi za pretragu(organizator,događaj,mjesto,datum)"
+					placeholder="uvjet pretraživanja (organizator,događaj,mjesto,datum)"
 					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
 				</form>
-
+				<a href="novi.php" class="button success expanded"><i class="fas fa-plus-circle fa-2x"></i></a>
 				
 				<?php
 					
@@ -100,6 +100,10 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<td><?php echo $red->vrijeme; ?></td>
 							<td><?php echo $red->ime; ?></td>
 							
+							<td>
+								<a href="detalji.php?sifra=<?php echo $red->sifra ?>"><i class="far fa-edit fa-2x"></i></a>
+								<a href="brisanje.php?sifra=<?php echo $red->sifra ?>"><i class="far fa-trash-alt fa-2x"></i></a>  
+							</td>
 							
 						</tr>
 						

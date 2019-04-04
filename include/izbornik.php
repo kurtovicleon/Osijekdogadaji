@@ -12,7 +12,7 @@
       stavkaIzbornika($putanjaAPP."index.php", $naslovAPP); ?>
       
       <?php if(isset($_SESSION[$appID."autoriziran"])): ?>	
-      	<?php stavkaIzbornika($putanjaAPP . "privatno/nadzornaPloca.php", "Nadzorna ploča"); ?>
+      	<?php stavkaIzbornika($putanjaAPP . "privatno/nadzornaPloca/index.php", "Nadzorna ploča"); ?>
 		<li>
 			<a href="#">Događaji</a>
 			<ul class="menu vertical">

@@ -6,8 +6,6 @@ use dogadajiosijek;
 create table korisnik(
 sifra int not null primary key auto_increment,
 ime varchar(50) not null,
-adresa varchar(50) not null,
-mjesto varchar(50) not null,
 kontaktbroj int not null,
 email varchar(50) not null
 );
@@ -37,10 +35,10 @@ alter table dogadaj add foreign key (korisnik) references korisnik(sifra);
 
 alter table slika add foreign key (dogadaj) references dogadaj(sifra);
 
-insert into korisnik(ime,adresa,mjesto,kontaktbroj,email) VALUES
-('Caffe bar Osijek','Radićeva 10','Osijek',38595645987,'caffeos@osijek.hr'),
-('Restoran Konoba','Županijska 15','Osijek',38596487613,'konoba@osijek.hr'),
-('Muzej mursa','Europska avenija 16','Osijek',38598493829,'mursaos@osijek.hr');
+insert into korisnik(ime,kontaktbroj,email) VALUES
+('Caffe bar Osijek',38595645987,'caffeos@osijek.hr'),
+('Restoran Konoba',38596487613,'konoba@osijek.hr'),
+('Muzej mursa',38598493829,'mursaos@osijek.hr');
 
 
 insert into dogadaj(korisnik,naziv,mjesto,vrijeme,cijena,tekst,kategorija,datum) values 
