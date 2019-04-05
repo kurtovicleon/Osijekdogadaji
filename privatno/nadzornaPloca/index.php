@@ -19,7 +19,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 				
 				<form method="get">
 					<input type="text" name="uvjet" 
-					placeholder="uvjet pretraživanja (organizator,događaj,mjesto,datum)"
+					placeholder="Unesi za pretragu(organizator,događaj,mjesto,datum)"
 					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
 				</form>
 				<a href="novi.php" class="button success expanded"><i class="fas fa-plus-circle fa-2x"></i></a>

@@ -9,21 +9,20 @@ $naslovAPP="Događaji u Osijeku";
 $appID="Osijek događanja";
 $dev=true;
 $brojRezultataPoStranici=7;
-
-if($_SERVER["HTTP_HOST"]==="kurta24.byethost7.com"){
-	$host="	sql109.byethost.com";
-	$dbname="b7_23439297_dogadajiosijek";
-	$dbuser="b7_23439297";
-	$dbpass="l1e2o3n4";
-	$dev=false;
-}else{
-	$host="localhost";
+if($_SERVER["HTTP_HOST"]==="localhost"){
+$host="localhost";
 	$dbname="dogadajiosijek";
 	$dbuser="leon";
 	$dbpass="leon";
 	$dev=true;
 }
-
+else{
+	$host="sql109.byethost.com";
+	$dbname="b7_23439297_dogadajiosijek";
+	$dbuser="b7_23439297";
+	$dbpass="l1e2o3n4";
+	$dev=false;
+}
 
 
 	
