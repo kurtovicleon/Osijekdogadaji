@@ -17,15 +17,15 @@
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "YOUR-EMAIL-ADDRESS";
-        $mail->Password = 'YOUR-PASSWORD';
+        $mail->Username = "kurtovicleon@gmail.com";
+        $mail->Password = 'K1u2R3t4O5v6I';
         $mail->Port = 465; //587
         $mail->SMTPSecure = "ssl"; //tls
 
         //Email Settings
         $mail->isHTML(true);
         $mail->setFrom($email, $name);
-        $mail->addAddress("YOUR-EMAIL-ADDRESS");
+        $mail->addAddress("kurtovicleon@gmail.com");
         $mail->Subject = $subject;
         $mail->Body = $body;
 

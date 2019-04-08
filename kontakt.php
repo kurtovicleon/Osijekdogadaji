@@ -1,9 +1,9 @@
-<?php include_once 'konfiguracija.php'; ?>
 <!doctype html>
+<?php include_once 'konfiguracija.php'; ?>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <?php include_once 'include/head.php'; ?>
-		<meta charset="UTF-8">
+<head>
+<?php include_once 'include/head.php'; ?>
+    <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,24 +14,19 @@
             margin-top: 10px;
         }
     </style>
-  </head>
-  <body>
-    <div class="grid-container">
+</head>
+<body>
+
+<div class="grid-container">
     	<?php include_once 'include/zaglavlje.php'; ?>
       	<?php include_once 'include/izbornik.php'; ?>
-      	
-      	<div class="grid-x grid-padding-x">
-			<div class="large-12 cell">
-				Kontakt
-			</div>
-		</div>
-		<div class="container" style="margin-top:100px;">
+    <div class="container" style="margin-top:100px;">
         <div class="row justify-content-center">
             <div class="col-md-6 col-md-offset-3" align="center">
-                <input id="name" placeholder="Name" class="form-control">
+                <input id="name" placeholder="Ime" class="form-control">
                 <input id="email" placeholder="Email" class="form-control">
-                <input id="subject" placeholder="Subject" class="form-control">
-                <textarea class="form-control" id="body" placeholder="Email Body"></textarea>
+                <input id="subject" placeholder="Naslov" class="form-control">
+                <textarea class="form-control" id="body" placeholder="Vaš tekst"></textarea>
                 <input type="button" onclick="sendEmail()" value="Send An Email" class="btn btn-primary">
             </div>
         </div>
@@ -57,9 +52,9 @@
                        body: body.val()
                    }, success: function (response) {
                         if (response.status == "success")
-                            alert('Email Has Been Sent!');
+                            alert('Vaš Email je poslan!');
                         else {
-                            alert('Please Try Again!');
+                            alert('Molimo vas pokušajte ponovno');
                             console.log(response);
                         }
                    }
@@ -77,11 +72,17 @@
             return true;
         }
     </script>
-		<?php include_once 'include/podnozje.php'; ?>
+
+
+
+
+<?php include_once 'include/podnozje.php'; ?>
 		
       
-    </div>
+        </div>
 
-    <?php include_once 'include/skripte.php'; ?>
-  </body>
+   <?php include_once 'include/skripte.php'; ?>
+
+
+</body>
 </html>

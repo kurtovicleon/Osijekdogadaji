@@ -84,6 +84,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<th>Upad</th>
 							<th>Vrijeme</th>
 							<th>Organizator</th>
+							<th>Uredi/briši</th>
 						</tr>
 					</thead>
 					<tbody>

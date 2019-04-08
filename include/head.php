@@ -4,3 +4,5 @@
 <title><?php echo $naslovAPP; ?></title>
 <link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/foundation.css">
 <link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/app.css">
+<link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/loginstil.css">
+<link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/background.css">

@@ -11,9 +11,9 @@
       	
       	<div class="grid-x grid-padding-x">
 			<div class="large-4 large-offset-4 cell centered">
-				<form class="log-in-form" action="autoriziraj.php" method="post">
-				  <h4 class="text-center">Prijavi sebe kako bi mogao i događaj</h4>
-				  <label>Email
+				<form class="loginBox" action="autoriziraj.php" method="post">
+				  <h4 style="color:white;">Prijavi sebe kako bi mogao i događaj</h4>
+				  <label style="color:white;">Email
 				    <input type="email" name="email" placeholder="Unesite email"
 				    value="<?php if(isset($_GET["email"])){
 				    	echo $_GET["email"];
@@ -26,19 +26,19 @@
 					
 					 ?>">
 				  </label>
-				  <label>Lozinka
+				  <label style="color:white;">Lozinka
 				    <input type="password" name="lozinka" placeholder="Lozinka"
 				    value="<?php echo $dev ? "leon" : ""; ?>">
 				  </label>
 				  <p><input type="submit" class="button expanded" value="Prijava"></input></p>
 				  <?php if(isset($_GET["neuspjelo"])){
-				  	echo "Neispravna kombinacija email/lozinka";
+				  	echo "<p style='color:white;'>"."Neispravna kombinacija email/lozinka";
 				  } ?>
 				</form>
 
 			</div>
 		</div>
-		<?php include_once 'include/podnozje.php'; ?>
+	
 		
       
     </div>

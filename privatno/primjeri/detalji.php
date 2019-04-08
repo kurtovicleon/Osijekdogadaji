@@ -111,7 +111,7 @@ if(!isset($_GET["sifra"])){
 				  
 				  <input type="hidden" name="sifradogadaja" value="<?php echo $_POST["sifradogadaja"]; ?>"></input>
 				  <input type="hidden" name="sifrakorisnika" value="<?php echo $_POST["sifrakorisnika"]; ?>"></input>
-				  <p><input type="submit" class="button expanded" value="Promjeni polaznika"></input></p>
+				  <p><input type="submit" class="button expanded" value="Dodaj/promijeni događaj"></input></p>
 				</form>
 				
 			</div>
