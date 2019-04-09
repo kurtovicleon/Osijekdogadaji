@@ -6,7 +6,6 @@ if(!isset($_GET["sifra"])){
 	
 	if(isset($_POST["sifradogadaja"])){
 		
-		//ovdje dođu kontrole OIB i ostalo
 
 	if(count($greska)==0){
 		
@@ -86,7 +85,7 @@ if(!isset($_GET["sifra"])){
     <div class="grid-container">
     	<?php include_once '../../include/zaglavlje.php'; ?>
       	<?php include_once '../../include/izbornik.php'; ?>
-      	<a href="index.php"><i style="color: red;" class="fas fa-chevron-circle-left fa-2x"></i></a>
+      	<a href="index.php"><i style="color: red;" class="fas  fa-arrow-left fa-2x"></i></a>
       	<div class="grid-x grid-padding-x">
 			<div class="large-4 large-offset-4 cell centered">
 				<form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
@@ -103,17 +102,18 @@ if(!isset($_GET["sifra"])){
 				  inputText("tekst", "Ovdje napišite tekst", $greska);
 				  inputText("kategorija", "upišite kategoriju događaja", $greska);
 				  ?>
+				  	  <?php
+				   include_once 'inputdatum.php';
+				  inputDatum("datum", "datum događanja", $greska);
+				 
+				  ?>
 				  <?php include_once 'inputbroj.php';
 				   inputBroj("kontaktbroj", "+385956328741", $greska); ?>
 				  <?php 
 				   include_once 'inputvrijeme.php';
 				  inputVrijeme("vrijeme", "12:50:00", $greska);
 				  ?>
-				  <?php
-				   include_once 'inputdatum.php';
-				  inputDatum("datum", "datum događanja", $greska);
-				 
-				  ?>
+				  
 				  
 				  <input type="hidden" name="sifradogadaja" value="<?php echo $_POST["sifradogadaja"]; ?>"></input>
 				  <input type="hidden" name="sifrakorisnika" value="<?php echo $_POST["sifrakorisnika"]; ?>"></input>

@@ -55,7 +55,8 @@ section {
      */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+ }
 
 /* Grouping content
        ========================================================================== */
@@ -4499,7 +4500,7 @@ select {
     content: '\2026';
     color: #0a0a0a; }
 
-.pagination-previous a::before,
+.pagination-previous a::before
 .pagination-previous.disabled::before {
   display: inline-block;
   margin-right: 0.5rem;

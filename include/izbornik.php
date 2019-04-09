@@ -1,11 +1,49 @@
-<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-  <div class="title-bar-title"><?php echo $naslovAPP; ?></div>
-</div>
+<style>
 
-<div class="top-bar" id="example-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
+.foundation-5-top-bar {
+  background: #333;
+  color: #fefefe;
+}
+
+.foundation-5-top-bar .menu {
+  background: #333;
+}
+
+.foundation-5-top-bar .menu a {
+  color: #fefefe;
+}
+
+.foundation-5-top-bar .is-dropdown-submenu {
+  border: 0;
+}
+
+.foundation-5-top-bar .is-dropdown-submenu-item.opens-right a::after {
+  border-color: transparent transparent transparent #fefefe;
+}
+
+.foundation-5-top-bar .js-drilldown-back > a::before {
+  border-color: transparent #fefefe transparent transparent;
+}
+
+.foundation-5-top-bar .is-drilldown-submenu-parent > a::after {
+  border-color: transparent transparent transparent #fefefe;
+}
+
+.foundation-5-top-bar .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fefefe transparent transparent;
+}
+
+</style>
+<div class="top-bar foundation-5-top-bar">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+    </span>
+    <strong><?php echo $naslovAPP; ?></strong>
+  </div>
+  <div id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true">
     	
       <?php 
     
@@ -38,9 +76,10 @@
   
       <?php endif;?>
       
-      <?php stavkaIzbornika($putanjaAPP."onama.php", "O nama"); ?>
+      <?php stavkaIzbornika($putanjaAPP."era.php", "ERA"); ?>
       <?php stavkaIzbornika($putanjaAPP."kontakt.php", "Kontakt"); ?>
       
     </ul>
   </div>
+</div>
 </div>

@@ -77,7 +77,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<th>Datum</th>
 							<th>Naziv događaja</th>
 							<th>Opis</th>
-							<th>Upad</th>
+							<th>Upad(Kn)</th>
 							<th>Vrijeme</th>
 							<th>Organizator</th>
 							<th>Uredi</th>
@@ -98,7 +98,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<td><?php echo $red->ime; ?></td>
 							
 							<td>
-								<a href="detalji.php?sifra=<?php echo $red->sifra ?>"><i class="far fa-edit fa-2x"></i></a>
+								<a href="detalji.php?sifra=<?php echo $red->sifra ?>"><i class="fas fa-align-justify fa-2x"></i></a>
 								
 							</td>
 							

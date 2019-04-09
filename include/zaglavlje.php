@@ -3,6 +3,11 @@
 
 	</div>
 	<div class="large-8 cell">
+	<style>
+	h1   {color: black;
+		font-family: cursive;}
+
+</style>
 	  <h1><?php echo $naslovAPP; ?></h1>
 	</div>
 	<div class="large-2 cell">

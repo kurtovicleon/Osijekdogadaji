@@ -8,7 +8,7 @@ $putanjaAPP = "/Osijekdogadaji/";
 $naslovAPP="Događaji u Osijeku";
 $appID="Osijek događanja";
 $dev=true;
-$brojRezultataPoStranici=7;
+$brojRezultataPoStranici=5;
 if($_SERVER["HTTP_HOST"]==="localhost"){
 $host="localhost";
 	$dbname="dogadajiosijek";

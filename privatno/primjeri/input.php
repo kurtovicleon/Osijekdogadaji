@@ -2,8 +2,6 @@
 
 function inputText($name,$placeholder,$greska){
 	if(!isset($greska[$name])): ?>
-	<form class="callout text-center">
-	<div class="floated-label-wrapper">
 	  <label><?php echo $name ?>
 	    <input  type="text" id="<?php echo $name ?>" name="<?php echo $name ?>" 
 	    placeholder="<?php echo $placeholder ?>"
@@ -16,12 +14,6 @@ function inputText($name,$placeholder,$greska){
 	    aria-invalid aria-describedby="uuid"
 	    value="<?php echo isset($_POST[$name]) ? $_POST[$name] : ""; ?>" >
 	    <span class="form-error is-visible" id="uuid"><?php echo $greska[$name]; ?></span>
-		</label>
-
-		
-</for
-		<?php endif;
-	
-
-
-}
+	  </label>
+	 <?php endif;
+} 

@@ -1,3 +1,4 @@
+
 <ul class="pagination text-center" role="navigation">
 				  <li class="pagination-previous"><a href="?stranica=<?php echo $stranica - 1; ?>&uvjet=<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>">Prethodno</a></li>
 				 
