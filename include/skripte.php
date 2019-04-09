@@ -3,3 +3,4 @@
 <script src="<?php echo $putanjaAPP; ?>js/vendor/foundation.js"></script>
 <script src="<?php echo $putanjaAPP; ?>js/vendor/fontawesome/fontawesome-all.min.js"></script>
 <script src="<?php echo $putanjaAPP; ?>js/app.js"></script>
+

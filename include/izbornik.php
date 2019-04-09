@@ -12,7 +12,13 @@
       stavkaIzbornika($putanjaAPP."index.php", $naslovAPP); ?>
       
       <?php if(isset($_SESSION[$appID."autoriziran"])): ?>	
-      	<?php stavkaIzbornika($putanjaAPP . "privatno/nadzornaPloca/index.php", "Nadzorna ploča"); ?>
+			<?php if($_SESSION[$appID."autoriziran"]->uloga==="oper"):?>
+		<li>
+			
+			<?php stavkaIzbornika($putanjaAPP . "privatno/nadzornaPloca/index.php", "Nadzorna ploča"); ?>
+		
+		</li>
+      <?php endif;?>
 		<li>
 			<a href="#">Događaji</a>
 			<ul class="menu vertical">
@@ -21,7 +27,6 @@
 				?>
 			</ul>
 		</li>
-    <?php if($_SESSION[$appID."autoriziran"]->uloga==="oper"):?>
 		<li>
 			<a href="#">Prijavi događaj</a>
 			<ul class="menu vertical">
@@ -30,7 +35,7 @@
 				?>
 			</ul>
 		</li>
-      <?php endif;?>
+  
       <?php endif;?>
       
       <?php stavkaIzbornika($putanjaAPP."onama.php", "O nama"); ?>

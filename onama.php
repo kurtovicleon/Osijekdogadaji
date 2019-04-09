@@ -5,6 +5,15 @@
     <?php include_once 'include/head.php'; ?>
   </head>
   <body>
+  <p>Date: <input type="text" id="datepicker" size="30" ></p>
+ 
+<p>Format options:<br>
+  <select id="format">
+    <option value="mm/dd/yy">Obavezno Odaberi format niže</option>
+    <option value="yy-mm-dd">Godina mjesec dan</option>
+  
+  </select>
+</p>
     <div class="grid-container">
     	<?php include_once 'include/zaglavlje.php'; ?>
       	<?php include_once 'include/izbornik.php'; ?>
@@ -22,3 +31,5 @@
     <?php include_once 'include/skripte.php'; ?>
   </body>
 </html>
+
+

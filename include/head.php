@@ -6,3 +6,5 @@
 <link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/app.css">
 <link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/loginstil.css">
 <link rel="stylesheet" href="<?php echo $putanjaAPP; ?>css/background.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+

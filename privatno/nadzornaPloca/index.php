@@ -22,7 +22,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 					placeholder="Unesi za pretragu(organizator,događaj,mjesto,datum)"
 					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
 				</form>
-				<a href="novi.php" class="button success expanded"><i class="fas fa-plus-circle fa-2x"></i></a>
+				<a href="novi.php" class="button success expanded"><i class="fas fa-calendar-plus fa-2x"></i></a>
 				
 				<?php
 					

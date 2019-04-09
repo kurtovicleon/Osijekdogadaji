@@ -18,7 +18,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 			<div class="large-12 cell">
 				
 			
-				<a href="novi.php" class="button success expanded"><i class="fas fa-plus-circle fa-2x"></i></a>
+				<a href="novi.php" class="button success expanded"><i class="fas fa-calendar-plus fa-2x"></i></a>
 				
 				<?php
 					
@@ -80,6 +80,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<th>Upad</th>
 							<th>Vrijeme</th>
 							<th>Organizator</th>
+							<th>Uredi</th>
 						</tr>
 					</thead>
 					<tbody>

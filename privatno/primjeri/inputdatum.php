@@ -1,11 +1,11 @@
 <?php
 
-function inputText($name,$placeholder,$greska){
+function inputDatum($name,$placeholder,$greska){
 	if(!isset($greska[$name])): ?>
 	<form class="callout text-center">
 	<div class="floated-label-wrapper">
 	  <label><?php echo $name ?>
-	    <input  type="text" id="<?php echo $name ?>" name="<?php echo $name ?>" 
+	    <input  type="date" id="<?php echo $name ?>" name="<?php echo $name ?>" 
 	    placeholder="<?php echo $placeholder ?>"
 	    value="<?php echo isset($_POST[$name]) ? $_POST[$name] : ""; ?>">
 	  </label>

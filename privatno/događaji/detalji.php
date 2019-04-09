@@ -90,34 +90,25 @@ if(!isset($_GET["sifra"])){
       	<div class="grid-x grid-padding-x">
 			<div class="large-4 large-offset-4 cell centered">
 				<form class="callout text-center" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-				  <h4 class="text-center">Prijava podataka </h4>
+				  <h4 class="text-center">Detalji o događaju </h4>
 				  
 				  <?php 
 				  
 				  include_once 'input.php';
 				  inputText("ime", "Grad Osijek", $greska);
-				  inputText("email", "nazivmaila@email.com", $greska);
 				  inputText("naziv", "Naziv vašeg događaja", $greska);
 				  inputText("mjesto", "mjesto odražavanja događaja", $greska);
+				  inputText("datum", "datum događanja", $greska);
+				  inputText("vrijeme", "12:50:00", $greska);
 				  inputText("cijena", "upišite cijenu u kunama", $greska);
 				  inputText("tekst", "Ovdje napišite tekst", $greska);
-				  inputText("kategorija", "upišite kategoriju događaja", $greska);
-				  ?>
-				  <?php include_once 'inputbroj.php';
-				   inputBroj("kontaktbroj", "+385956328741", $greska); ?>
-				  <?php 
-				   include_once 'inputvrijeme.php';
-				  inputVrijeme("vrijeme", "12:50:00", $greska);
-				  ?>
-				  <?php
-				   include_once 'inputdatum.php';
-				  inputDatum("datum", "datum događanja", $greska);
 				 
 				  ?>
+				 	
 				  
 				  <input type="hidden" name="sifradogadaja" value="<?php echo $_POST["sifradogadaja"]; ?>"></input>
 				  <input type="hidden" name="sifrakorisnika" value="<?php echo $_POST["sifrakorisnika"]; ?>"></input>
-				  <p><input type="submit" class="button expanded" value="Dodaj/promijeni događaj"></input></p>
+				
 				</form>
 				
 			</div>

@@ -1,6 +1,6 @@
 <div class="grid-x grid-padding-x">
 	<div class="large-2 cell">
-	  logo
+
 	</div>
 	<div class="large-8 cell">
 	  <h1><?php echo $naslovAPP; ?></h1>

@@ -15,14 +15,24 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
       	<?php include_once '../../include/izbornik.php'; ?>
       	
       	<div class="grid-x grid-padding-x">
-			<div class="large-12 cell">
+			<div class="large-4 cell">
 				
 				<form method="get">
 					<input type="text" name="uvjet" 
-					placeholder="Unesi za pretragu(organizator,događaj,mjesto,datum)"
+					placeholder="Unesi(organizator,događaj,mjesto,datum)"
 					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
+					<p><input type="submit" class="button expanded" value="Pretraživanje: Organizator,događaj,mjesto"></input></p>
 				</form>
-
+				
+				<form method="get">
+					<input type="date" name="uvjet" 
+					value="<?php echo isset($_GET["uvjet"]) ? $_GET["uvjet"] : "" ?>" />
+					<p><input type="submit" class="button expanded" value="Pretraživanje po datumu"></input></p>
+				</form>
+				</div>
+		</div>
+				<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
 				
 				<?php
 					
@@ -84,6 +94,7 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<th>Upad</th>
 							<th>Vrijeme</th>
 							<th>Organizator</th>
+							<th>Info</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -100,7 +111,10 @@ $stranica = isset($_GET["stranica"]) ? $_GET["stranica"] : 1;
 							<td><?php echo $red->vrijeme; ?></td>
 							<td><?php echo $red->ime; ?></td>
 							
-							
+							<td>
+								<a href="detalji.php?sifra=<?php echo $red->sifra ?>"><i class="fas fa-info-circle"></i></a>
+						 
+							</td>
 						</tr>
 						
 					<?php endforeach; ?>

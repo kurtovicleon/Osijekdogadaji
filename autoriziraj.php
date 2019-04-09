@@ -3,7 +3,7 @@
 if(!isset($_POST["email"]) || !isset($_POST["lozinka"])){
 	exit;
 }
-//ovdje će doći spajanje na bazu
+
 if($_POST["email"]==="leon@osijek.hr" && $_POST["lozinka"]==="leon"){
 	include_once 'konfiguracija.php';
 	$o = new stdClass();
@@ -21,6 +21,16 @@ if($_POST["email"]==="leon@osijek.hr" && $_POST["lozinka"]==="leon"){
 	$o->uloga="admin";
 	$_SESSION[$appID."autoriziran"]=$o;
 	header("location: index.php");
-}else{
+}
+else if ($_POST["email"]==="edunova@osijek.hr" && $_POST["lozinka"]==="edunova"){
+	include_once 'konfiguracija.php';
+	$o = new stdClass();
+	$o->ime="edunova";
+	$o->prezime = "edunova";
+	$o->uloga="user";
+	$_SESSION[$appID."autoriziran"]=$o;
+	header("location: index.php");
+}
+	else{
 	header("location: login.php?neuspjelo&email=" . $_POST["email"]);
 }
