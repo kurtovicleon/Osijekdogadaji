@@ -18,7 +18,7 @@
 </style>
 	  <h1>Dobro došli na stranicu za pregled događaja</h1>
     	<center>
-      <img src="slike/osijekevent.png" />
+      <img src="slike/osijekevent.PNG" />
       </center>
 			</div>
 		</div>
